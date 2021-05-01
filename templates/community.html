@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+    
+<!-- signup WINDOW -->
+{% block signup %}
+    <div class="signup hidden">
+      <button class="closesignup">&times;</button>
+      <h1>Create an account today</h1>
+      <p>
+        create an account to be able to post farms and sell your produce
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+<script type="text/javascript" src="{{ url_for('static', filename='js/signup.js') }}"></script>
+{% endblock %}
+
+    <!-- ________________________________________ -->
+{% block main_content %}
+<body id="page1" style="font-family: Mulish;">
+<div class="about" style= "background-image: url( {{ url_for('static', filename='images/bg.jpg') }}); background-size: 100% 100%;">
+
+<center><h2 class="headingfind"><span>Find farms and markets near you</span></h2>
+</center>
+  <!-- <input style="text-indent:17px;" type="text" name="search" placeholder="Enter your Zipcode"  minlength="5" maxlength="5"><input type="submit" value="GO"> -->
+  <div class="search-container">
+    <form action="{{ url_for('search_zip')}}">
+      <input type="text" placeholder="Enter your zipcode" name="search" minlength="5" maxlength="5">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+</div>
+   <div class="findevents">
+    <div class="aboutus">
+  <img src="{{ url_for('static', filename='images/events.jpg') }}" alt="vegbag" class="vegbag">
+</div>
+  <h4 style="color: white; font-size: 22px; margin-top:30px;" >Farming season is all year round, Find events happening near by!</h4>
+  <p style="color: black; font-size: 15px; text-align: justify; margin-right: 90px; margin-top: 20px">From farmers markets to community gardens, there’s a place for you to connect with people in your neighborhood or city. to get the best experience, make sure to check out the stories told by our farmers who work hard. Our farmers make sure everyone gets fresh produces at affordable prices. during farming events, not only you will find fresh fruits and vegetables, but also you will socialize with the farmers and their families. There is always events around your neighbourhood, check out the event schedule.</p>
+  <form action="{{ url_for('events')}}">
+  <button class="quiz" style="margin-right: 100px;"><span>Check out events</span></button>
+    </form>
+</div>
+   <center><h3 style="padding-top: 20px;background-color: white;color: #01818d; font-weight: bold; ">Stories</h3></center>
+<div class="qualities">
+    <div class="column1">
+      <img src="{{ url_for('static', filename='images/story1.jpg') }}" alt="Step 1" height="120" width="190">
+    <h4 style="color: #01818D; font-size: 16px;">The happy couple</h4>
+    <p>
+    Laurie and daniel are my favorites, yet regular customers. Thier wont cook if thier food ingredients are not bought from us.
+    </p>
+  </div>
+  <div class="column1">
+          <img src="{{ url_for('static', filename='images/story2.jpg') }}" alt="Step 1"  height="120" width="190">
+    <h4 style="color: #01818D; font-size: 16px;">The twin farmers</h4>
+    <p>
+    After their father passed away, they decided to continue on his work in maintaining the farm and have it run by the name of the family.
+    </p>
+  </div>
+  <div class="column1">
+      <img src="{{ url_for('static', filename='images/story3.jpg') }}" alt="Step 1"  height="120" width="190">
+    <h4 style="color: #01818D; font-size: 16px;">Jack, the farmer</h4>
+    <p>
+     From south africa with a background in agriculture, I began the farming business because i think i can give to society.
+    </p>
+  </div>
+ 
+</div>
+{% endblock %}

@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+
+<!-- Sign upWINDOW -->
+{% block signup %}
+<div class="signup hidden">
+  <button class="closesignup">&times;</button>
+  <form >
+        <input type="text" class="text" value="Name">
+        <input type="text" class="text" value="Email">
+        <input type="password" value="Password">
+      <div class="submitform">
+            <input type="submit">
+      </div>
+    </form>
+</div>
+<div class="overlay hidden"></div>
+<script type="text/javascript" src="{{ url_for('static', filename='js/signup.js') }}"></script>
+{% endblock %}
+
+{% block main_content %}
+<body id="page1">
+<div class="about">
+<div class="aboutus">
+  <img src="{{ url_for('static', filename='images/vegbag.jpg') }}"  alt="vegbag" class="vegbag">
+</div>
+<div class="aboutus" style="padding-top: 44px;">
+  <h4 style="color: #01818d; line-height: 0px; font-size: 22px;" >About us</h4>
+  <h3 style="font-size: 22px" >Achieving a healthy diet is all about <i>#pearsisting</i></h3>
+  <p style="color: #01818d; text-align: justify;">Changing any kind of habit can take a lot of effort and when it comes to food, getting out of our comfort zone is even harder. Nowadays there are many grocery and meal delivery services to help you out, but at a high environmental cost. That’s why we created Pearsist, to help you and help communities around you to have a healthy food style. Because we believe there is a better way. </p>
+</div>
+</div>
+<div class="qualities">
+  <div class="column">
+    <h4 style="color: #01818D; font-size: 20px;">Sourcing Local 📌</h4>
+    <p>
+      We source from local farmers and producers to make fresh and healthy food more accesible to you. You can even get to know the people who grow the food you eat.<br> We believe in eating seasonally. The natural cycle of crops and produce is meant to support our health and nutritional needs for the season of life at hand.<br> Sourcing locally also means food is less likely to contain heavy doses of pesticides, herbicides and fungicides. (PS. it’s also better for your wallet!).
+    </p>
+  </div>
+  <div class="column">
+    <h4 style="color: #01818D; font-size: 20px;">Transport 🚚</h4>
+    <p>
+      Local foods promote a safer food supply for you and the planet with less transportation, less forced ripening and less refrigeration. Supply chains account for 18% of food emissions.<br> The more we reduce the distance between us and where our food is grown, the less carbon emissions we release.<br> Additionally, by sourcing locally grown foods we help maintain farmland and green spaces in our communities.
+    </p>
+  </div>
+  <div class="column">
+    <h4 style="color: #01818D; font-size: 20px;">Food Waste 🚮</h4>
+    <p>
+      Sourcing fresh food also reduces food waste. Every year, grocery stores grocery stores throw away 3 billion pounds of food. The number one reason is because produce rots or gets bruised during transportation. By sourcing locally, food gets to you at its prime.<br> Furthermore, our Food+ Tool allows you to try new foods that we think you’ll like, based on ones with similar flavor profiles that you already do! Broadening your palate can help create more demand for produce that would otherwise be wasted.
+    </p>
+  </div>
+  <div class="column">
+    <h4 style="color: #01818D ; font-size: 20px;">Packaging 📦</h4>
+    <p>
+      Reducing the distance between us and where our food is grown means that we don’t need to use insulators to keep your food fresh.<br><br> We use the least amount of recyclable cardboard boxes and paper bags for delivery orders.<br> We also encourage pickup at our partnering farms so you can bring your reusable bags to be filled with your order!.
+    </p>
+  </div>
+</div>
+<div class="team">
+  <div class="devcontain">
+      <h3><center>Development Team</center></h3>
+      <br>
+      <article id="content">
+        <div class="wrapper">
+          <div class="wrapper">
+            <section class="col1">
+              <span
+                ><img class="medium"
+                  src="{{ url_for('static', filename='images/youssef.jpeg') }}" 
+                  alt="youssef fannichi"
+                  width="200"
+                  height="200"
+                  />
+                </span>
+              <div class="cols">
+                <p class="pad_bot1 color1">Youssef Fannichi</br>Backend Development
+                <a
+                  href="https://medium.com/hack-diversity-movement/cohort-stories-meet-youssef-bc663944b392?source=collection_category---4------3-----------------------"
+                  class="link1"
+                  >Read More</a>
+                </p>
+              </div>
+            </section>
+            <section class="col1 ">
+               <span
+                ><img class="medium"
+                  src="{{ url_for('static', filename='images/andrea.jpeg') }}" 
+                  alt="Andrea Mock"
+                  width="200"
+                  height="200"
+                  />
+                </span>
+              <div class="cols">
+                <p class="pad_bot1 color1">Andrea Mock</br>Backend Development
+                <a
+                  href="https://medium.com/hack-diversity-movement/cohort-stories-meet-andrea-7bd87093238a?source=collection_category---4------1-----------------------"
+                  class="link1"
+                  >Read More</a
+                >
+                </p>
+              </div>
+            </section>
+            <section class="col1 ">
+               <span
+                ><img class="medium"
+                  src="{{ url_for('static', filename='images/foday.jpeg') }}" 
+                  alt="Foday Samura"
+                  width="200"
+                  height="200"
+                  />
+                </span>
+              <div class="cols">
+                <p class="pad_bot1 color1">Foday Samura</br>Frontend Development
+                <a
+                  href="https://medium.com/hack-diversity-movement/cohort-stories-meet-foday-307b809a081f?source=collection_category---4------1-----------------------"
+                  class="link1"
+                  >Read More</a
+                >
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="wrapper">
+            <section class="col1">
+              <span
+                ><img class="medium"
+                  src="{{ url_for('static', filename='images/nicole.jpeg') }}" 
+                  alt="Nicole Nater Navarro"
+                  width="200"
+                  height="200"
+                  />
+                </span>
+              <div class="cols">
+                <p class="pad_bot1 color1">Nicole Nater Navarro</br>Data Analyst & UX/UI Designer
+                <a
+                  href="https://medium.com/hack-diversity-movement/cohort-stories-meet-nicole-n-bab92cefad33?source=collection_category---4------2-----------------------"
+                  class="link1"
+                  >Read More</a
+                >
+                </p>
+              </div>
+            </section>
+            <section class="col1 ">
+               <span
+                ><img class="medium"
+                  src="{{ url_for('static', filename='images/gabriel.jpeg') }}" 
+                  alt="Gabriel Azubuike"
+                  width="200"
+                  height="200"
+                  />
+                </span>
+              <div class="cols">
+                <p class="pad_bot1 color1">Gabriel Azubuike</br>Information Technology
+                <a
+                  href="https://medium.com/hack-diversity-movement/cohort-stories-meet-gabriel-a-5067be6a69f3?source=collection_category---4------0-----------------------"
+                  class="link1"
+                  >Read More</a
+                >
+                </p>
+              </div>
+            </section>
+            <section class="col1 ">
+               <span
+                ><img class="medium"
+                  src="{{ url_for('static', filename='images/selam.jpeg') }}" 
+                  alt="Seleam Bekele"
+                  width="200"
+                  height="200"
+                  />
+                </span>
+              <div class="cols">
+                <p class="pad_bot1 color1">Selam Bekele</br>Data Analyst & UX/UI Designer
+                <a
+                  href="https://medium.com/hack-diversity-movement/cohort-stories-meet-selam-ce45e5943595?source=collection_category---4------1-----------------------"
+                  class="link1"
+                  >Read More</a
+                >
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </article>
+    </div>
+</div>
+{% endblock %}

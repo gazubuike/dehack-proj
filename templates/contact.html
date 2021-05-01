@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block signup %}
+    <div class="signup hidden">
+      <button class="closesignup">&times;</button>
+       <div class="signupform">
+      <strong><p style="color:rgb(78, 50, 50); line-height: 0px;">Create an account today</p></strong>
+      <!-- <form class="signupform"> -->
+						<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" >
+
+						<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" >
+
+						<input type="password" class="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+								<input  class="submitform" type="submit" value="SIGN UP" >
+						<div class="clear"></div>
+				<!-- </form> -->
+        	<a href="#" class="haveaccount" style="color:rgb(78, 50, 50);"><p>Already have an account?</p></a>
+					<a href="#" class="trouble" style="color:rgb(78, 50, 50);"><p>Trouble signing in?</p></a>
+          <div class="clear"> </div>
+          </div>
+    </div>
+    <div class="overlay hidden"></div>
+<script type="text/javascript" src="{{ url_for('static', filename='js/signup.js') }}"></script>
+{% endblock %}
+
+{% block main_content %}
+  <body id="page5">
+    <div class="body1">
+      <div class="main">
+        <!--header -->
+
+        <!-- / header -->
+        <!-- content -->
+      </div>
+    </div>
+    <div class="body2">
+      <div class="main">
+        <article id="content2">
+          <div class="wrapper">
+            <div class="col1">
+              <h2>Our Contact Information</h2>
+              <p class="color1">
+                Don't hesitate to contact us for questions or brochures and
+                events. Feel free to share any concerns you have about food, marts and farms.
+              </p>
+              <ul class="address">
+                <li>100 morissy blvrd, Boston, Ma, 02148</li>
+                <li>
+                  <pre>Green number: +1 781 852 6580</pre>
+                </li>
+                <li>
+                  <pre>Telephone: +1 617 144 1335</pre>
+                </li>
+                <li>
+                  <pre>E-mail: <a href="#">youssef.fannichi001@umb.edu</a></pre>
+                </li>
+              </ul>
+              <p>
+                By using this website or submitting this form, you agree to the
+                terms and conditions of use. We welcome feedback, but we are a
+                platform for farmers who list their produces, and having
+                questions about a specific product can be better addressed by
+                the farmer.
+              </p>
+            </div>
+            <div class="cols pad_left1">
+              <h2>Feel Free to Contact Us</h2>
+              <figure class="left marg_right1">
+                <img
+                  src="{{ url_for('static', filename='images/contact5.jpg') }}"
+                  alt=""
+                  width="280"
+                  height="404"
+                  style="border-radius: 4px; border: solid 3px"
+                />
+              </figure>
+              <p class="color1 pad_bot1">
+                The idea of pearsist is not only to eat healthy food, but also
+                to bring the best farmers and markets events near you. We make
+                sure that only certified and legit farmers are the ones who
+                access our platform and can show thier products.
+              </p>
+              <p class="pad_bot1">
+                Farmers love us not just because we are their platform where
+                they can add events, but also they can post their stories. We
+                love to hear the farmers' concerns and diffuculties that they
+                have. This allows us to provide them with the help they need and
+                connect them to the right service.
+              </p>
+              <p>
+                Did you know that we also have a page on facebook, Instagram and
+                twiter where you can can read the farmers stories directly.
+              </p>
+            </div>
+          </div>
+        </article>
+        <!-- / content -->
+      </div>
+    </div>
+    {% endblock  %}

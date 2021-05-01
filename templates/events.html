@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block signup %}
+    <div class="signup hidden">
+      <button class="closesignup">&times;</button>
+      <form class="signupform">
+      <strong><p class="signp" >Create an account today!</p></strong>
+						<input type="text" class="text" placeholder="Name" onfocus="this.value = ''" >
+						<input type="text" class="text" placeholder="Email" onfocus="this.value = ''" >
+						<input type="password" class="password" placeholder="Password" onfocus="this.value = ''">
+            <input type="password" class="password" placeholder="Confirm Password" onload="this.value =''">
+            <a href="#" class="haveaccount" style="color:rgb(78, 50, 50);"><p>Already have an account? Sign in</p></form></a>
+								<input  class="submitform" type="submit" value="SIGN UP" >
+                <input  class="closesignup2" type="button" value="CANCEL" >
+						<div class="clear"></div>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/signup.js') }}"></script>
+
+<div>
+        <div class="signin hidden">
+      <button class="closesignin">&times;</button>
+      <form class="signinform">
+      <strong><p class="signi" >Sign in to Pearsist!</p></strong>
+						<input type="text" class="text" placeholder="Name" onfocus="this.value = ''" >
+						<input type="password" class="password" placeholder="Password" onfocus="this.value = ''">
+            <a href="#" class="haveaccount" style="color:rgb(78, 50, 50);"><p>Trouble signing in? reset password</p></form></a>
+								<input  class="submitform" type="submit" value="SIGN IN" >
+                <input  class="closesignin2" type="button" value="CANCEL" >
+						<div class="clear"></div>
+      </form>
+    </div>
+
+
+    <div class="overlay hidden"></div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/signin.js') }}"></script>
+
+
+</div>
+{% endblock  %}
+
+{% block main_content %}
+<body id="page1" onload="init();" style="font-family: Mulish;">
+<div class="about" style=" background-image: url( images/Produce.jpg) ; background-size: 100% 100%;">
+
+<center><h2 class="headingfind"  style="margin-top: 190px; line-height: 0px;"><span>Browse farming events near where you live</span></h2>
+</center>
+  <!-- <input style="text-indent:17px;" type="text" name="search" placeholder="Enter your Zipcode"  minlength="5" maxlength="5"><input type="submit" value="GO"> -->
+
+</div>
+{% endblock %}
+  

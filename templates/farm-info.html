@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="farm" id="{{farm['_id']}}">
+      <div class="farm-info">
+        <h3>{{farm['LocationName']}}</h3>
+        <p>Address: {{farm['Address']}} {{farm['City']}}, {{farm['State']}} {{farm['Zip']}}</p>
+        <p>Description: {{farm['Description']}}</p>
+        <p>Website: <a href="{{farm['Website']}}">{{farm['Website']}}</a></p>
+        <p>Phone: {{farm['Phone']}}</p>
+      </div>
+</div>
+
+<p><a href="{{url_for('all_farms')}}">Head to all farms</a></p></p>
+
+
+{% endblock %}
