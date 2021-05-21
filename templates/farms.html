@@ -3,6 +3,7 @@
 
 
 {% block main_content %}
+
 <div class="farms">
     <div class="farmcontainer">
         <!-- <h3><center>Development Team</center></h3> -->
@@ -14,7 +15,7 @@
               <section class="col1">
                 <span
                   ><img class="farmimg"
-                    src="{{ url_for('static', filename='images/farm.jpeg') }}"
+                    src={{farm['Image']}}
                     alt="farm"
                     height="115" width="180"
                     />
@@ -32,7 +33,15 @@
             </div>
           </div>
         </article>
+        <div>
+          {% if total > 1 %}             
+                {{ pagination.info }}
+              {% endif %}     
+              {{ pagination.links }}
+        </div>
     </div>
+
 </div>
+
 
 {% endblock %}
